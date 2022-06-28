@@ -40,6 +40,10 @@
   line-height: 2;
 }
 
+.buttons-board {
+  display: flex;
+}
+
 .buttons-board .btn {
   padding: 8px 20px;
   background-color: royalblue;
@@ -51,13 +55,13 @@
 
 .pagination {
   display: flex;
-  margin: 10px 0 0 6px;
+  margin: 10px 0 0 12px;
 }
 
 .pagination span {
   display: inline-block;
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   background-color: #7494f3;
 }
