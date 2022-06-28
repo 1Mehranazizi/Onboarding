@@ -2,9 +2,7 @@ import React from 'react';
 
 const SecondPage = () => {
     return (
-        <div>
-            
-        </div>
+        <h2>Have a good day</h2>
     );
 };
 

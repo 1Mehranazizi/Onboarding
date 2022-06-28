@@ -4,7 +4,7 @@ import SecondPage from "./pages/SecondPage";
 
 function App() {
   return (
-    <div>
+    <div className="main">
       <Routes>
         <Route path="/" element={<Onboarding />} />
         <Route path="/second" element={<SecondPage />} />

@@ -1,34 +1,34 @@
 import React from "react";
 
-import Video from "../assets/video/1.mp4";
-
-const Board = () => {
+const Board = ({ boardData, allData, plusStep }) => {
   return (
     <div className="board">
       <div className="left-board">
         <div className="text-board">
-          <h2 className="title">test test</h2>
-          <p className="text">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
-            neque aut dolor, architecto voluptates deserunt sapiente explicabo
-            reiciendis quibusdam et? Consequatur fugit reprehenderit esse ullam
-            culpa mollitia earum autem quas.
-          </p>
+          <h2 className="title">{boardData.title}</h2>
+          <p className="text">{boardData.description}</p>
         </div>
         <div className="buttons-board">
-          <button className="btn">Next</button>
+          <button className="btn" onClick={plusStep}>
+            Next
+          </button>
           <div className="pagination">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
+            {allData.map((item) => (
+              <span
+                key={item.id}
+                className={item.id === boardData.id ? "active" : ""}
+              ></span>
+            ))}
           </div>
         </div>
       </div>
       <div className="right-board">
-        <video autoPlay loop muted width={350} height={350}>
-          <source src={Video} type="video/mp4" />
-        </video>
+        <video
+          src={boardData.video}
+          autoPlay
+          loop
+          muted
+        ></video>
       </div>
     </div>
   );
